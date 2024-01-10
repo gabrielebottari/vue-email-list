@@ -18,13 +18,16 @@ createApp({
             emails : [],
         };
     },
+    
     mounted() {
 
         for (let i = 0; i < 10; i++) {
+
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-        .then(response => {
-          // Aggiungi l'indirizzo email alla lista
-          this.emails.push(response.data.response);
+
+        .then(result => {
+          //aggiungo l'indirizzo email all'array
+          this.emails.push(result.data.response);
             })
         }
 

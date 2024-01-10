@@ -21,7 +21,7 @@
 
             <h1>Email Generator</h1>
 
-            <ul>
+            <ul v-if="emails.length === 10">
 
                 <li v-for="(email, index) in emails" :key="index">
                     {{ email }}
